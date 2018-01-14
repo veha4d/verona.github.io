@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 	type="module"	version="2.5"	client="site"	method="upgrade">
+	<name>CodeFAQ</name>
+	<author>codematrix</author>
+	<creationDate>September 2012</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>finlandka@yandex.ru</authorEmail>
+	<authorUrl>codematrix.ru</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+	<style>
+	.codefaqdesk {
+		text-align: center;
+		font-size: 16pt;
+		color: #AAA;
+		cursor: pointer;
+	}
+	
+	.codefaqdesk:hover {
+		color: #141516;
+	}
+	</style>
+	<a style='font-size: 18px' href='http://codematrix.ru/' target='_blank'>CodeFAQ</a><br /><img src='../modules/mod_codefaq/tmpl/images/logo.png' style='width: 100%;' /><br /><p class='codefaqdesk'>Joomla 2.5 module FAQ</p>
+	<div style="width: 100%; text-align: center">
+	<a style="font-size: 12pt;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S35QKS3E3CR22" target="_blank">DONATE</a><p>Your donation will be spent on the creation of new free modules</p></div>
+	]]></description>
+	
+	<files>
+		<filename module="mod_codefaq">mod_codefaq.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>		
+		<filename>mod_codefaq.xml</filename>
+		<filename>license.txt</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_codefaq.ini</language>
+		<language tag="en-GB">language/en-GB.mod_codefaq.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_codefaq.ini</language>
+		<language tag="ru-RU">language/ru-RU.mod_codefaq.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jqueryinclude" type="list" default="1" label="JQUERY_INCLUDE" description="JQUERY_INCLUDE_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="color" name="codecoloreven" label="CODE_COLOR_EVEN" description="CODE_COLOR_EVEN_DESC" default="#eee"></field>
+				<field type="color" name="codecolorhover" label="CODE_COLOR_HOVER" description="CODE_COLOR_HOVER_DESC" default="#deffff"></field>
+				<field type="color" name="codebordercolor" label="CODE_BORDER_COLOR" description="CODE_BORDER_COLOR_DESC" default="cyan"></field>
+				<field name="codeicons" type="list" default="dark" label="CODE_ICONS" description="CODE_ICONS_DESC">
+				<option value="light">LIGHT</option>
+				<option value="dark">DARK</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="codefieldset1">
+				<!--Block 1-->
+				<field type="spacer" name="codeseparator1" label="CODESEPARATOR1" />
+				<field name="blockstatus1" type="list" default="1" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question1" label="QUESTION" description="QUESTION_DESC" default="What is CodeFAQ?">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer1" label="ANSWER" description="ANSWER_DESC" default="CodeFAQ - the module of questions and answers. For animation the effect of slideUp and slideDown is used">
+				</field>
+				
+				<!--Block 2-->
+				<field type="spacer" name="codeseparator2" label="CODESEPARATOR2" />
+				<field name="blockstatus2" type="list" default="1" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question2" label="QUESTION" description="QUESTION_DESC" default="What it is possible to contain?">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer2" label="ANSWER" description="ANSWER_DESC" default="It is possible to insert any text and pictures. Big pictures will decrease under the size of the block.">
+				</field>
+				
+				<!--Block 3-->
+				<field type="spacer" name="codeseparator3" label="CODESEPARATOR3" />
+				<field name="blockstatus3" type="list" default="1" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question3" label="QUESTION" description="QUESTION_DESC" default="What can be configured?">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer3" label="ANSWER" description="ANSWER_DESC" default="You can disable or enable the library jQuery. You can change the color of icons, color on hover, border color of the active unit, even color blocks.">
+				</field>
+				
+				<!--Block 4-->
+				<field type="spacer" name="codeseparator4" label="CODESEPARATOR4" />
+				<field name="blockstatus4" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question4" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer4" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 5-->
+				<field type="spacer" name="codeseparator5" label="CODESEPARATOR5" />
+				<field name="blockstatus5" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question5" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer5" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 6-->
+				<field type="spacer" name="codeseparator6" label="CODESEPARATOR6" />
+				<field name="blockstatus6" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question6" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer6" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 7-->
+				<field type="spacer" name="codeseparator7" label="CODESEPARATOR7" />
+				<field name="blockstatus7" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question7" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer7" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 8-->
+				<field type="spacer" name="codeseparator8" label="CODESEPARATOR8" />
+				<field name="blockstatus8" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question8" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer8" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 9-->
+				<field type="spacer" name="codeseparator9" label="CODESEPARATOR9" />
+				<field name="blockstatus9" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question9" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer9" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 10-->
+				<field type="spacer" name="codeseparator10" label="CODESEPARATOR10" />
+				<field name="blockstatus10" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question10" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer10" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				</fieldset>
+				<fieldset name="codefieldset2">
+				<!--Block 11-->
+				<field type="spacer" name="codeseparator11" label="CODESEPARATOR11" />
+				<field name="blockstatus11" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question11" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer11" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 12-->
+				<field type="spacer" name="codeseparator12" label="CODESEPARATOR12" />
+				<field name="blockstatus12" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question12" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer12" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 13-->
+				<field type="spacer" name="codeseparator13" label="CODESEPARATOR13" />
+				<field name="blockstatus13" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question13" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer13" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 14-->
+				<field type="spacer" name="codeseparator14" label="CODESEPARATOR14" />
+				<field name="blockstatus14" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question14" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer14" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 15-->
+				<field type="spacer" name="codeseparator15" label="CODESEPARATOR15" />
+				<field name="blockstatus15" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question15" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer15" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 16-->
+				<field type="spacer" name="codeseparator16" label="CODESEPARATOR16" />
+				<field name="blockstatus16" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question16" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer16" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 17-->
+				<field type="spacer" name="codeseparator17" label="CODESEPARATOR17" />
+				<field name="blockstatus17" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question17" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer17" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 18-->
+				<field type="spacer" name="codeseparator18" label="CODESEPARATOR18" />
+				<field name="blockstatus18" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question18" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer18" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 19-->
+				<field type="spacer" name="codeseparator19" label="CODESEPARATOR19" />
+				<field name="blockstatus19" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question19" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer19" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				<!--Block 20-->
+				<field type="spacer" name="codeseparator20" label="CODESEPARATOR20" />
+				<field name="blockstatus20" type="list" default="0" label="BLOCK_STATUS" description="BLOCK_STATUS_DESC">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+				</field>
+				<field type="textarea" name="question20" label="QUESTION" description="QUESTION_DESC" default="">
+				</field>
+				<field type="editor" width="250" filter="safehtml" name="answer20" label="ANSWER" description="ANSWER_DESC" default="">
+				</field>
+				
+				</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="owncache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension> 

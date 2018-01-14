@@ -1,0 +1,35 @@
+.code-list {
+	width:100%;
+	top:0;
+	left:0;
+}
+.code-container {
+	margin:20px auto;
+	width:99%;
+}
+.code-question {
+	border:1px solid #ccc;
+	padding:10px 15% 10px 10px;
+	cursor:pointer;
+	font-size:16pt;
+}
+.codelight {
+	background:url('../images/downlight.png') no-repeat 99%;
+}
+.codedark {
+	background:url('../images/down.png') no-repeat 99%;
+}
+.code-answer {
+	display:none;
+	background:#fff;
+	border:1px solid #ccc;
+	padding:10px;
+	font-size:12pt;
+}
+.codedarkdell {
+	background:url('../images/del.png') no-repeat 99%;
+}
+.codelightdell {
+	background:url('../images/dellight.png') no-repeat 99%;
+}
+
